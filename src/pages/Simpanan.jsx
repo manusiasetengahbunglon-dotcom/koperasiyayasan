@@ -30,9 +30,9 @@ export default function Simpanan() {
 
   async function getAnggota() {
     const { data } = await supabase
-      .from('anggota')
-      .select('*')
-      .order('nama', { ascending: true })
+  .from('pinjaman')
+  .select('*')
+  .order('tanggal', { ascending: false })
 
     setAnggota(data || [])
   }
